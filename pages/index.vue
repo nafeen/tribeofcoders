@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
+      <h1 class="title text-3xl sm:text-7xl">
         TribeOfCoders
       </h1>
       <div class="links">
@@ -48,7 +48,7 @@ export default Vue.extend({})
     sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  /*font-size: 100px;*/
   color: #35495e;
   letter-spacing: 1px;
 }
