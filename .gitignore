@@ -94,6 +94,6 @@ sw.*
 node_modules
 dist
 .nuxt
-.awspublish
+.awspublish-tribeofcoders.com
 deploy.sh
 
