@@ -38,6 +38,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://google-analytics.nuxtjs.org/
+    '@nuxtjs/google-analytics',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
@@ -63,6 +65,13 @@ export default {
 
   // Google Analytics
   googleAnalytics: {
-    id: 'G-Z4EEQ2JXTJ'
+    id: 'UA-196578237-1'
+  },
+
+  // RuntimeConfig
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: 'UA-196578237-1'
+    }
   }
 }
