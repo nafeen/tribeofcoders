@@ -7,7 +7,7 @@
       </h1>
       <div class="links">
         <a
-          href="https://github.com/nafeen"
+          href="https://github.com/nafeen/tribeofcoders"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
