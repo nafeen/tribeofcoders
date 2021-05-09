@@ -28,6 +28,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/dotenv',
     '@nuxtjs/google-analytics',
     '@nuxtjs/tailwindcss',
     // https://go.nuxtjs.dev/typescript
@@ -65,13 +66,13 @@ export default {
 
   // Google Analytics
   googleAnalytics: {
-    id: 'UA-196578237-1'
+    id: process.env.GOOGLE_ANALYTICS_ID
   },
 
   // RuntimeConfig
   publicRuntimeConfig: {
     googleAnalytics: {
-      id: 'UA-196578237-1'
+      id: process.env.GOOGLE_ANALYTICS_ID
     }
   }
 }
