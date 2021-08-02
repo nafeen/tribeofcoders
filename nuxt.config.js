@@ -33,6 +33,7 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -73,6 +74,13 @@ export default {
   publicRuntimeConfig: {
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID
+    }
+  },
+
+  // Vuetify
+  vuetify: {
+    theme: {
+      dark: true
     }
   }
 }
