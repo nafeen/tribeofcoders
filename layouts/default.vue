@@ -2,8 +2,6 @@
   <v-app class="overflow-hidden">
     <Header />
     <Nuxt />
-    <Footer />
+    <LazyFooter />
   </v-app>
 </template>
-<script lang="ts"></script>
-<style scoped></style>
