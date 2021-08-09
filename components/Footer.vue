@@ -14,9 +14,3 @@
     </v-footer>
   </div>
 </template>
-<script lang="ts">
-  import Vue, { PropOptions } from 'vue'
-  export default {
-    name: 'Footer'
-  }
-</script>
