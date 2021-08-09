@@ -82,5 +82,11 @@ export default {
     theme: {
       dark: true
     }
-  }
+  },
+
+  // Handling routing
+  ssr: false,
+  router: {
+    mode: 'hash',
+  },
 }
