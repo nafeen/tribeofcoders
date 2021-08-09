@@ -1,10 +1,8 @@
 <template>
   <div>
     <v-app-bar
-      app
       absolute
-      elevate-on-scroll
-      scroll-target="#scrolling-techniques-7"
+      app
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>{{ title }}</v-toolbar-title>
@@ -14,52 +12,62 @@
       v-model="drawer"
       absolute
       temporary
-    >
-      <v-list
-        nav
-        dense
       >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Tribe of Coders
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            Coding a better world
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-divider></v-divider>
+      <v-list
+        dense
+        nav
+      >
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          :to="item.link"
+          nuxt
         >
-          <v-list-item>
-            <v-list-item-title>
-              <nuxt-link to="/">Mission</nuxt-link>
-            </v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
   </div>
 </template>
+
 <script lang="ts">
-  import Vue, { PropOptions } from 'vue'
-  import { mapGetters } from 'vuex'
-  export default Vue.extend({
+  import Vue from 'vue'
+  import Vuex from 'vuex'
+  export default {
     name: 'Header',
     data () {
-      var drawer: boolean = false
-      var group: boolean = false
+      let drawer: boolean = false
+      let items: Array<{ title: string, icon: string, link: string }> = [
+        { title: 'Home', icon: 'mdi-home-outline', link: '/' },
+        { title: 'Mission', icon: 'mdi-information-outline', link: '/mission' },
+        { title: 'Contact', icon: 'mdi-account-box-outline', link: '/contact' }
+      ]
       return {
         drawer,
-        group
+        items
       }
     },
-    methods: {},
-    mounted () {},
     computed: {
-      ...mapGetters({
+      ...Vuex.mapGetters({
         title: 'getTitle'
       })
-    },
-    watch: {
-      group () {
-        this.drawer = false
-      },
-      title: 'setTitle'
     }
-  })
+  }
 </script>
-<style scoped>
-</style>

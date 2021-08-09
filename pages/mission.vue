@@ -1,6 +1,6 @@
 <template>
   <v-main class="overflow-y-auto">
-    <StaticAbout />
+    <StaticMission />
   </v-main>
 </template>
 <script lang="ts">
@@ -14,18 +14,16 @@
   export default {
     data () {
       let meta  : Meta = {
-        content     : 'Tribe of Coders',
-        hid         : 'Tribe of Coders',
-        name        : 'Tribe of Coders',
-        title       : 'Tribe of Coders'
+        content     : 'Our Mission | Tribe of Coders',
+        hid         : 'Our Mission',
+        name        : 'Our Mission',
+        title       : 'Our Mission'
       }
       return {
         meta
       }
     },
     head () {
-      let title: string = ''
-      let meta: Array<Meta> = []
       return {
         title : this.meta.title,
         meta  : [{
@@ -35,7 +33,7 @@
         }]
       }
     },
-    mounted() {
+    mounted () {
       this.$store.dispatch('setTitle', this.meta.title)
     }
   }

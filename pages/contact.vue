@@ -1,6 +1,6 @@
 <template>
   <v-main class="overflow-y-auto">
-    <StaticAbout />
+    <StaticContact />
   </v-main>
 </template>
 <script lang="ts">
@@ -14,16 +14,16 @@
   export default {
     data () {
       let meta  : Meta = {
-        content     : 'Tribe of Coders',
-        hid         : 'Tribe of Coders',
-        name        : 'Tribe of Coders',
-        title       : 'Tribe of Coders'
+        content     : 'Contact Us | Tribe of Coders',
+        hid         : 'Contact Us',
+        name        : 'Contact Us',
+        title       : 'Contact Us'
       }
       return {
         meta
       }
     },
-    head () {
+    head (callback: any) {
       let title: string = ''
       let meta: Array<Meta> = []
       return {
@@ -35,7 +35,7 @@
         }]
       }
     },
-    mounted() {
+    mounted () {
       this.$store.dispatch('setTitle', this.meta.title)
     }
   }
