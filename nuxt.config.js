@@ -30,7 +30,7 @@ export default {
   buildModules: [
     '@nuxtjs/dotenv',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     '@nuxtjs/vuetify'
