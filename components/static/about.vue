@@ -1,7 +1,7 @@
 <template>
 	<v-container class="mt-2">
     <p class="">
-      Our mission is to defend the free & open Internet by trying to make it safer. We address security issues with responsible disclosure (<a href="https://www.iso.org/standard/45170.html" target="_blank">coordinated vulnerability disclosures</a>).
+      Our mission is to defend the free & open Internet by trying to make it safer. We address security issues with responsible disclosure (<a href="https://www.iso.org/standard/72311.html" target="_blank">coordinated vulnerability disclosures</a>).
     </p>
 		<v-card
 			outlined
